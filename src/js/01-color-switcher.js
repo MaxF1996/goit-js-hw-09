@@ -14,10 +14,10 @@ function colorChangeFirst() {
 
 startButton.addEventListener('click', () => {
   colorChangeFirst();
+  stopButton.removeAttribute('disabled');
   startRainbow = setInterval(() => {
     page.style.backgroundColor = getRandomHexColor();
   }, 1000);
-  stopButton.removeAttribute('disabled');
 });
 
 stopButton.addEventListener('click', () => {
